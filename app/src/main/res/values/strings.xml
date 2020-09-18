@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">SPH Task</string>
-    <string name="loading">Please wait...</string>
-    <string name="empty_list">oops, List is empty.</string>
+    <string name="app_name">Mobile Task</string>
+    <string name="no_internet">Check your internet connection</string>
     <string name="avg">Average</string>
     <string name="decrease_msg">This quarter decreased</string>
-    <string name="increase_msg">This quarter increase</string>
+    <string name="increase_msg">This quarter increased</string>
+
+
 </resources>

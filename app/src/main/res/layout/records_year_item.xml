@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.mbiletask.data.remote.model.RecordYear" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#f5f5f5"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/quarterLayout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/q1_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@{item.quarters.get(0).decrease > 0 ? @drawable/decrease_icon :@drawable/increase_icon}" />
+
+                <TextView
+                    android:id="@+id/q1name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q1_pic"
+                    android:text="@{item.quarters.get(0).quarter}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/q1value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q1name"
+                    android:text="@{item.quarters.get(0).volume_of_mobile_data}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/header2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/q2_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@{item.quarters.get(1).decrease > 0 ? @drawable/decrease_icon :@drawable/increase_icon}" />
+
+                <TextView
+                    android:id="@+id/q2name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q2_pic"
+                    android:text="@{item.quarters.get(1).quarter}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/q2value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q2name"
+                    android:text="@{item.quarters.get(1).volume_of_mobile_data}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/header3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header2"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/q3_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@{item.quarters.get(2).decrease > 0 ? @drawable/decrease_icon :@drawable/increase_icon}" />
+
+                <TextView
+                    android:id="@+id/q3name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q3_pic"
+                    android:text="@{item.quarters.get(2).quarter}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/q3value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q3name"
+                    android:text="@{item.quarters.get(2).volume_of_mobile_data}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/header4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header3"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/q4_pic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@{item.quarters.get(3).decrease > 0 ? @drawable/decrease_icon :@drawable/increase_icon}" />
+
+                <TextView
+                    android:id="@+id/q4name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q4_pic"
+                    android:text="@{item.quarters.get(3).quarter}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/q4value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toEndOf="@+id/q4name"
+                    android:text="@{item.quarters.get(3).volume_of_mobile_data}"
+                    android:textColor="#424242"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_toEndOf="@+id/quarterLayout"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/avg"
+                android:textColor="#424242"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/avgValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avg"
+                android:layout_marginTop="7dp"
+                android:text='@{String.format("%.4f", item.avg)}'
+                android:textColor="#424242"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
